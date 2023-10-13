@@ -1,8 +1,8 @@
-haskell-statevar (1.2-deepin1) unstable; urgency=medium
+haskell-statevar (1.2.2-1) unstable; urgency=medium
 
-  * Rebuild
+  * New upstream release
 
- -- Deepin Packages Builder <packages@deepin.org>  Mon, 14 Nov 2022 17:41:16 +0800
+ -- Clint Adams <clint@debian.org>  Tue, 14 Jun 2022 16:11:48 -0400
 
 haskell-statevar (1.2-1) unstable; urgency=medium
 

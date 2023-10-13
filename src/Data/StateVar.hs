@@ -7,10 +7,16 @@
 {-# LANGUAGE DefaultSignatures #-}
 #endif
 {-# LANGUAGE TypeFamilies #-}
+-- Foreign.ForeignPtr is unsafe before GHC-7.10
+#if __GLASGOW_HASKELL__ >= 704 && MIN_VERSION_base(4,8,0)
+{-# LANGUAGE Safe #-}
+#elif __GLASGOW_HASKELL__ >= 702
+{-# LANGUAGE Trustworthy #-}
+#endif
 --------------------------------------------------------------------------------
 -- |
 -- Module      :  Data.StateVar
--- Copyright   :  (c) Edward Kmett 2014-2019, Sven Panne 2009-2018
+-- Copyright   :  (c) Edward Kmett 2014-2019, Sven Panne 2009-2021
 -- License     :  BSD3
 -- 
 -- Maintainer  :  Sven Panne <svenpanne@gmail.com>
